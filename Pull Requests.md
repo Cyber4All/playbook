@@ -19,3 +19,6 @@ For a PR to be approved, it'll need to be reviewed. When you open a PR, assign r
 
 ### Link Relevant Issues
 It is possible to close an issue with a PR in GitHub, as detailed in [this blog post](https://blog.github.com/2013-05-14-closing-issues-via-pull-requests/). When opening up a new PR that resolves a feature request or bug noted in an issue, be sure to link the PR to the issue.
+
+### Versioning the Change
+After your PR has been approved, it's time to version it. Read more about proper versioning [here](Versioning.md). After giving it a shiny new version number, go ahead and merge it into master. Congrats, you just put a PR through :tada:
