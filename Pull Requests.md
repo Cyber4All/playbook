@@ -3,8 +3,10 @@
 Pull Requests (often referred to as PRs) are how we manage all product changes. Whether you're fixing a bug, adding a feature, or updating a build process, you'll do it through a Pull Request.
 
 This allows us to do two main things:
-1. Validate the change works in the way we intend
-2. Keep other team members up to date on changes to the code base
+1. Build a better product
+2. Build a better team
+
+The first of these probably makes sense. We should review each other's work to ensure standards are adhered to, it's well tested, etc. The second may not be intuitive, but is even more important than the first. PRs are a way of promoting an environment of learning, which is one of our core tenets here at Cyber4All. A code review is a way to share knowledge and experience across the team, allowing both the author and reviewer to learn from each other's experiences.
 
 Reviewing PRs is a routine task for every member of the team each work day. Because of this, we should always aim to keep our PRs as concise and descriptive as possible. Doing so allows our teammates to more quickly get up to speed with the work we are doing, and minimizes the risk of side effects and bugs.
 
