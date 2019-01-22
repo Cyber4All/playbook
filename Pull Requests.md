@@ -24,3 +24,8 @@ It is possible to close an issue with a PR in GitHub, as detailed in [this blog 
 
 ### Versioning the Change
 After your PR has been approved, it's time to version it. Read more about proper versioning [here](Versioning.md). After giving it a shiny new version number, go ahead and merge it into master. Congrats, you just put a PR through :tada:
+
+## After Merging a PR
+
+### Deleting the Branch
+After a PR is approved and merged, common convention is to delete the branch.  This clears up branch clutter when selecting branches and removes code that will likely never be touched after merging.
