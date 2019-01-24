@@ -24,4 +24,7 @@ Thus, an example pre-release for version `2.0.0` could be `2.0.0-alpha.0.0`. Upo
 ## Push New Version
 To update the application to a newer version, run the [npm version](https://docs.npmjs.com/cli/version) command in the following format: `npm version <version number>`. This command will update the `package.json` and `package-lock.json` files. It will also create a new git tag and version commit. 
 
-Once the `npm version` command has completed, simply use the `git push` command to push the changes to remote.
+Once the `npm version` command has completed, simply use the `git push` command to push the changes to remote. 
+
+When using `git push` it's important to push that newly created git tag up to the repository as well. To accomplish this, simply append a flag to the end of your command as follows:
+`git push --follow-tags`
