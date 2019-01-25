@@ -26,5 +26,9 @@ To update the application to a newer version, run the [npm version](https://docs
 
 Once the `npm version` command has completed, simply use the `git push` command to push the changes to remote. 
 
-When using `git push` it's important to push that newly created git tag up to the repository as well. To accomplish this, simply append a flag to the end of your command as follows:
+When using `git push` it's important to push that newly created git tag up to the repository as well. If your git installation isn't configured to automatically push tags, simply append a flag to the end of your command as follows:
 `git push --follow-tags`
+You can also configure your git installation to always push any local tags to your remote:
+`git config --global push.followTags true`
+
+[Read more](https://git-scm.com/book/en/v2/Git-Basics-Tagging) about git tags 
