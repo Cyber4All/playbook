@@ -22,6 +22,25 @@ For a PR to be approved, it'll need to be reviewed. When you open a PR, assign r
 ### Link Relevant Issues
 It is possible to close an issue with a PR in GitHub, as detailed in [this blog post](https://blog.github.com/2013-05-14-closing-issues-via-pull-requests/). When opening up a new PR that resolves a feature request or bug noted in an issue, be sure to link the PR to the issue.
 
+#### Epics
+When an enhancement is too large to have its full scope logged in a single issue, it is called an epic. Epics span multiple issues and are only completed after each child issue is closed. To denote an issue as an epic, prepend the phrase **Parent of** before the issue number of the child.
+
+*Example*
+
+Issue #1 is an epic that contains issue #2 and #3. The description of issue #1 would then contain the following:
+
+> Parent of #2
+> Parent of #3
+
+#### Dependencies
+When an issue requires another to be resolved before it can be, there is a dependency between them. In these cases, the issue that needs the other to be resolved first, should contain the keyword **Needs** before the issue number of the dependency.
+
+*Example*
+
+Issue #5 cannot be resolved until issue #4 is. The description of issue #5 would then contain the following:
+
+> Needs #4
+
 ### Versioning the Change
 After your PR has been approved, it's time to version it. Read more about proper versioning [here](Versioning.md). After giving it a shiny new version number, go ahead and merge it into master. Congrats, you just put a PR through :tada:
 
