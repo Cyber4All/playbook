@@ -28,7 +28,7 @@ Reviewing PRs is a routine task for every member of the team each work day. Beca
 
 ## Guidelines
 
-At a minimum, a PR should have a description, a list of changes made, and the link(s) to the connected clubhouse stories.
+At a minimum, a PR should have a description, a list of changes made, and the link(s) to the connected Clubhouse stories.
 
 ### Description
 
