@@ -42,7 +42,7 @@ The changes made section should include any information about what was changed i
 
 ### Clubhouse Stories
 
-The clubhouse stories section should include any stories that are associated with the PR.  This should include at least the story number and it's associated link.  The goal of this section is to allow reviewers to see the stories it's associated with for more information that is not present in the PR description and changes made sections (as some PRs can become quite large and involve multiple stories).
+The Clubhouse stories section should include any stories that are associated with the PR.  This should include at least the story number and the associated link.  The goal of this section is to allow reviewers to see the stories it's associated with for more information that is not present in the PR description and changes made sections (as some PRs can become quite large and involve multiple stories).
 
 While not required, it is helpful to include a link to the PR created on the clubhouse story as well.
 
