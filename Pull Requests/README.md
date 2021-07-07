@@ -11,6 +11,7 @@ This file details the practices that should be followed when creating a pull req
     - [Description](#description)
     - [Changes Made](#changes-made)
     - [Clubhouse Stories](#clubhouse-stories)
+    - [Re-Requesting Reviews](#re-requesting-reviews)
     - [Merging PRs](#merging-prs)
     - [Additional Requirements](#additional-requirements)
 
@@ -45,6 +46,10 @@ The changes made section should include any information about what was changed i
 The Clubhouse stories section should include any stories that are associated with the PR.  This should include at least the story number and the associated link.  The goal of this section is to allow reviewers to see the stories it's associated with for more information that is not present in the PR description and changes made sections (as some PRs can become quite large and involve multiple stories).
 
 While not required, it is helpful to include a link to the PR created on the clubhouse story as well.
+
+### Re-Requesting Reviews
+
+Most PRs you author will most likely have a 'changes requested' review at some point, especially if the story you are working on is a larger, complex story.  In these cases, you should always re-request the person who asked for changes and also re-request anyone who has commented and already approved the PR.  This is necessary because, for some changes, the changes requested could involve a large refactor of what you have already written.  In this case, the code that was already approved and reviewed has changed significantly and should be re-reviewed because of those changes.
 
 ### Merging PRs
 
