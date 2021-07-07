@@ -49,7 +49,7 @@ While not required, it is helpful to include a link to the PR created on the clu
 
 ### Re-Requesting Reviews
 
-Most PRs you author will most likely have a 'changes requested' review at some point, especially if the story you are working on is a larger, complex story.  In these cases, you should always re-request the person who asked for changes and also re-request anyone who has commented and already approved the PR.  This is necessary because, for some changes, the changes requested could involve a large refactor of what you have already written.  In this case, the code that was already approved and reviewed has changed significantly and should be re-reviewed because of those changes.
+Most PRs you create will have a 'changes requested' review, especially if the requirements of the associated story are more complex.  In these cases, you should always re-request the person who asked for changes and also re-request anyone who has reviewed, commented or approved your PR.  This is necessary because, for some changes, the changes requested could involve a large refactor of what you have already written.  In this case, the code that was already approved and reviewed has changed significantly and should be re-reviewed because of those changes.
 
 ### Merging PRs
 
