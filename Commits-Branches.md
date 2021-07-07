@@ -30,6 +30,6 @@ git checkout BRANCH_NAME
 
 ### Commits
 
-When committing, your commit messages don't need to be very specific but they do need to be descriptive enough to distinguish what you did at that commit.  For instance, `initialize basic application` is a better commit message then `commit code`.
+When committing, your commit messages doesn't need to be very specific but it needs to be descriptive enough to distinguish what you did at that commit.  For instance, `initialize basic application` is a better commit message than `commit code`.
 
 The frequency of how much you commit is also up to you.  The best practice though is to commit code when you reach a working state or complete a task during the development of a story.  For instance, say you are developing a login form.  You may want to commit the initialization of the form, then the working implementation of the form, and then finally the css styling of the form.  By making more frequent commits, it makes it easier to track during the development of a story what went wrong during your implementation.  It's easier to debug 4 changed files instead of 40.
