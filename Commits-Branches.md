@@ -26,6 +26,12 @@ git branch BRANCH_NAME
 git checkout BRANCH_NAME
 ```
 
+To push your branch to github run the following:
+```
+git push --set-upstream origin BRANCH_NAME
+```
+After you run this to set up your branch in the GitHub repository, you can push your changes from your branch by using the following command while checking out your branch `git push`.
+
 **Note:** If you are working on multiple small change or bug fix stories (such as one line fixes) its ok to use only one branch to incorporate all of these fixes.  Otherwise, you should always create a new branch for the story.
 
 ### Commits

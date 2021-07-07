@@ -13,7 +13,7 @@ This file details the practices that should be followed when creating a backend 
 
 ## Guidelines
 
-Backend PRs should contain added/updated routes, schema definitions changed, and/or any updates to wikis required if the PR required changes to them.
+Backend PRs should contain a written description of all added/updated routes, schema definitions changed, and/or any updates to wikis required if the PR required changes to them.
 
 ### Added/Updated Routes
 
@@ -21,10 +21,10 @@ If a PR added or updated a route (or routes), the PR should include the API cont
 
 ### Schema Definitions Changed
 
-If a PR changed or added any schema definitions (such as a database or request body schema), the PR should include what part of the schema was added or updated.  For instance, if you work on a story that requires the user's age during user registration, the request body and user schema is changed and should be noted in the PR.
+If a PR changed or added any schema definitions (such as a database or request body schema), the PR should include what part of the schema was added or updated.  For instance, if you work on a story that requires the user's age during user registration, the request body and user schema is changed and should be noted in the PR's description.
 
 ### Updates to Wikis
 
-If a PR significantly changes the workflow or requirements of a existing procedure, the wiki associated with the procedure should be updated with the new info and linked in the PR.  For instance, if you work on a refactor for our user authentication system that rewrites how we verify users, the wiki associated with user authentication should be updated.
+If a PR significantly changes the workflow or requirements of a existing procedure, the wiki associated with the procedure should be updated with the new info and linked in the PR's description.  For instance, if you work on a refactor for our user authentication system that rewrites how we verify users, the wiki associated with user authentication should be updated.
 
 **Note:** If the wiki doesn't exist, please create one in it's repository.
