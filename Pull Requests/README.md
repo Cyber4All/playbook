@@ -22,7 +22,7 @@ This allows us to do two main things:
 1. Build a better product
 2. Build a better team
 
-We should review each other's work to ensure our standards are adhered to, it's well tested, etc. The second may not be intuitive, but is even more important than the first. PRs are a way of promoting an environment of learning, which is one of our core tenets here at Cyber4All. A code review is a way to share knowledge and experience across the team, allowing both the author and reviewer to learn from each other's experiences.
+We should review each other's work to ensure our standards are adhered to, it's well tested, implements business requirements etc. The second may not be intuitive, but is even more important than the first. PRs are a way of promoting an environment of learning, which is one of our core tenets here at Cyber4All. A code review is a way to share knowledge and experience across the team, allowing both the author and reviewer to learn from each other's experiences.
 
 Reviewing PRs is a routine task for every member of the team each work day. Because of this, we should always aim to keep our PRs as concise and descriptive as possible. Doing so allows our teammates to more quickly get up to speed with the work we are doing.
 
