@@ -72,6 +72,25 @@ Documentation:
 
 ### Route53
 
+Route 53 Resources:
+
+- Register new domains to an IP
+- Register new subdomains to an IP
+- Setup various applications like email and google workspace
+
+SecurEd Use Cases:
+
+- Deploying a new app under a different domain
+- Setting up Google Workspace
+- Setting up Emails
+- Deploying a new app under a subdomain
+- All SecurEd services deployed use Route 53
+
+Documentation:
+
+- [AWS Route 53](https://aws.amazon.com/route53/)
+- [DNS Record Types](https://www.cloudflare.com/learning/dns/dns-records/)
+
 ### Certificate Manager
 
 ### API Gateway
