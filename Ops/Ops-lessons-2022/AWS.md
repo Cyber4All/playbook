@@ -97,6 +97,19 @@ Documentation:
 
 ### CloudFront (CF)
 
+CloudFront Resources:
 
+- Accelerate static website content delivery
+- Serve video on demand or live streaming video
+- Encrypt specific fields throughout system processing
+- Serve private content
 
+SecurEd Use Cases:
 
+- Speed up loading our static sites
+  - Example: clark.press, standard guidelines client, CARD client
+
+Documentation:
+
+- [CloudFront Use Cases](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/IntroductionUseCases.html)
+- [AWS CloudFront](https://docs.aws.amazon.com/cloudfront/)
