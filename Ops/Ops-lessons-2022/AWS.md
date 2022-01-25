@@ -66,6 +66,27 @@ Documentation:
 
 ### Fargate
 
+Serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.
+
+[What is Serverless?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
+
+Difference between Fargate and EC2:
+
+- Serverless
+- Autoscales compute resources
+- No infrastructure management
+- Image -> Define Compute resources -> Run, Manage applications -> Pay
+
+SecurEd Use Cases:
+
+- Scheduled Tasks in ECS Clusters are deployed on Fargate
+- Looking to run low-demand services on Fargate rather then EC2
+
+Documentation:
+
+- [ECS on AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html)
+- [User Guide for AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html)
+
 ### ElasticBeanstalk (EB)
 
 ### Lambda
