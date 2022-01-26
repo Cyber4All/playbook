@@ -33,7 +33,7 @@
 #### SecurEd Use Cases:
 - We currently deploy CLARK-Gateway, change-authorship-service, standard-guidelines-service, and cards-service.
 
-#### Documentation
+#### Documentation:
 - [AWS ElasticBeanstalk Service](https://aws.amazon.com/elasticbeanstalk/)
 - [AWS ElasticBeanstalk Docs](https://docs.aws.amazon.com/elastic-beanstalk/index.html)
 
@@ -58,6 +58,18 @@
 ### Certificate Manager
 
 ### API Gateway
+
+#### API Gateway Resources
+- This allows for developers to create, publish, maintain, monitor, and secure REST, HTTP, and WebSocket APIs. 
+- This services acts as the "front door" for applications that need to access databases, EC2 instances, or AWS Lambda functions. 
+- It supports both stateful and stateless APIs
+
+#### SecurEd Use Cases 
+- We currently do not use this in our production system, but have a number of old implementations in our AWS environment. 
+
+#### Documentation:
+- [Amazon API Gateway Overview](https://aws.amazon.com/api-gateway/)
+- [Amazon API Gateway Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
 ### CloudFront (CF)
 
