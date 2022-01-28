@@ -95,6 +95,14 @@ Each policy contains permissions that give or do not give access to certain serv
 
 ### Simple Storage Service (S3)
 
+In short S3 allows customers to store objects into buckets located in a region but are accessible by 'all' regions <br>
+You can find S3 documentation [here](https://docs.aws.amazon.com/s3/?id=docs_gateway)
+
+An object is a file and any metadata that describes the file. While a bucket is a container for objects. Each object has a key, which is the unique identifier for the object within the bucket <br>
+We use S3 buckets to store static websites, files, and logs.
+
+S3 buckets and the objects inside them are by default, private. You have access only to the S3 resources you created. Access can be granted by IAM permissions.
+
 ### Virtual Private Cloud (VPC)
 
 ### Route53
