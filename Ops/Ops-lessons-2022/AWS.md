@@ -53,6 +53,26 @@ All [documentation](https://docs.aws.amazon.com/cli/?id=docs_gateway) for the AW
 
 ### Identity and Access Management (IAM)
 
+In short [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) is an access control service that provides ways to organize and manage privileges. <br>
+
+IAM allows you to give different permissions to all your employees in your organizations or anyone outside of your organization. 
+The biggest features are User groups, Roles, and Policies
+
+#### User Groups
+
+User Groups can be given to Users in an organizations. User Groups give users certain permissions to certain services. In our recent IAM refactor we created multiple user groups. 3 groups for every category (App Integration, Compute, Management, Networking, Security, and Storage) <br>
+For example: Compute_1 gives a user full access to AmazonEC2, Administrator access to ElasticBeanstalk, and full access to AWSLambda, while Compute_3 only gives a user read access to these services. For a full breakdown to these user groups, please refer to the google drive document [here](https://docs.google.com/spreadsheets/d/1HKrcq5dDfvAB6Mqk9Ipa6GlcegCP4dWbXRYpjqgsbK8/edit?usp=sharing)
+
+#### Roles
+
+Roles are an identity you can crate that has specific permissions with credentials that are valid for a short duration.
+
+#### Policies
+
+Policies are attached to users, roles, and user groups. <br>
+There are AWS managed polices such as: AmazonEC2FullAccess. Users are also allowed to create their own policies to manage users and user groups. <br>
+Each policy contains permissions that give or do not give access to certain services.
+
 ### Elastic Container Service (ECS)
 
 ### Elastic Computer Cloud (EC2)
