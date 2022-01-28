@@ -46,7 +46,7 @@ SecurEd Use Cases:
 - Used to perform functionality that is not core to our system
   - Example: Downloads Test - Tests the downloads of various objects in different statuses and reports errors to MongoDB
 - Fargate is being used more then Lambda
-  - Most core functionality that were implemented as Lambda have become Fargate instances
+  - Most core functionality that were implemented in Lambda have become Fargate instances
 
 Documentation:
 
