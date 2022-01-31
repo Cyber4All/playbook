@@ -64,6 +64,9 @@ Usage:
 - Used in tandem with EventBridge to trigger an email when a scheduled tasks completes.
     - Example: LO or LO revision is released on CLARK
 
+Documentation:
+[AWS SNS](https://docs.aws.amazon.com/sns/?id=docs_gateway)
+
 ### Secrets Manager
 
 ### Simple Storage Service (S3)
@@ -84,6 +87,9 @@ CM Resources:
 
 SecurEd Usage:
 - We have certificates for CLARK, CARD, and SecurEd stored
+
+Documentation:
+[AWS Certificate Manager](https://docs.aws.amazon.com/acm/?id=docs_gateway)
 
 ### API Gateway
 
