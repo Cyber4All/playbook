@@ -29,7 +29,7 @@ There are 3 main interfaces used to communicate with AWS
 
 * AWS Console
 * SDKs (Software Development Kits)
-* AWS CLIv2
+* [AWS CLIv2](https://docs.aws.amazon.com/cli/latest/reference/)
 
 ### AWS Console
 
@@ -60,17 +60,20 @@ The biggest features are User groups, Roles, and Policies
 
 #### User Groups
 
-User Groups can be given to Users in an organizations. User Groups give users certain permissions to certain services. In our recent IAM refactor we created multiple user groups. 3 groups for every category (App Integration, Compute, Management, Networking, Security, and Storage) <br>
+User Groups are used to groups users in organizations. User Groups have policies attached to them that allow or deny permission to AWS services. In our recent IAM refactor we created multiple user groups. 3 groups for every category (App Integration, Compute, Management, Networking, Security, and Storage) <br>
 For example: Compute_1 gives a user full access to AmazonEC2, Administrator access to ElasticBeanstalk, and full access to AWSLambda, while Compute_3 only gives a user read access to these services. For a full breakdown to these user groups, please refer to the google drive document [here](https://docs.google.com/spreadsheets/d/1HKrcq5dDfvAB6Mqk9Ipa6GlcegCP4dWbXRYpjqgsbK8/edit?usp=sharing)
 
 #### Roles
 
-Roles are an identity you can crate that has specific permissions with credentials that are valid for a short duration.
+Roles are identities with attached policies that leverage dynamic credentials by making requests to STS.
 
 #### Policies
 
 Policies are attached to users, roles, and user groups. <br>
-There are AWS managed polices such as: AmazonEC2FullAccess. Users are also allowed to create their own policies to manage users and user groups. <br>
+AWS supports both AWS managed and customer managed policies. An example of AWS managed is AmazonEC2FullAccess 
+</br>
+Users are also allowed to create their own policies to manage users and user groups. <br>
+
 Each policy contains permissions that give or do not give access to certain services.
 
 ### Elastic Container Service (ECS)
@@ -98,10 +101,12 @@ Each policy contains permissions that give or do not give access to certain serv
 In short S3 allows customers to store objects into buckets located in a region but are accessible by 'all' regions <br>
 You can find S3 documentation [here](https://docs.aws.amazon.com/s3/?id=docs_gateway)
 
+S3 is also called Blob storage. Blobs (or objects) are files
+
 An object is a file and any metadata that describes the file. While a bucket is a container for objects. Each object has a key, which is the unique identifier for the object within the bucket <br>
 We use S3 buckets to store static websites, files, and logs.
 
-S3 buckets and the objects inside them are by default, private. You have access only to the S3 resources you created. Access can be granted by IAM permissions.
+S3 buckets and the objects inside them are by default, private. You have access only to the S3 resources you created. Access can be granted through bucket policies, bucket ACLs, and IAM policies
 
 ### Virtual Private Cloud (VPC)
 
