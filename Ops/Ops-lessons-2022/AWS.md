@@ -71,16 +71,67 @@ Documentation:
 ### Cloudwatch
 
 ### EventBridge
+- Abstracted version of cloudwatch events
+- Allows users to create rules that initiate events that trigger a target it has set in that rule
+- Eventbus is a collection of rules tha triggers targets
+- In eventbus an event has an rule and a target
+  - Whenever the rule is matched, the target is initiated
+
+SecurEd Use Cases:
+- Trigger all scheduled tasks in ECS
+- Trigger SNS and bundling service
+
+[AWS CloudTrail](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 
 ### CloudTrail
+- Tracks AWS API calls
+- Logs data in S3 buckets
+- CloudTrail insights logs unusual API activity
+- CloudTrail event history stores all API activity within the last 90 days
+  - Who called the action
+  - What service was called
+  - When the user called the action
+  - Where the user called it from
+
+SecurEd Use Cases:
+- Debugging user permissions
+
+[AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
 
 ### Simple Notification Service (SNS)
 
 ### Secrets Manager
+- Used to hold secrets for an AWS account
+
+SecurEd Use Cases:
+- Store IAM key pairs
+- Store Admin credentials
+- Store secrets for other non-AWS services
+- A middle man for key-rotation-service to move credentials from IAM to secrets manager then to the service that the key needs to be rotated on
+- Store any sensitive data used for developmental or production purposes
+
+Documentation:
+- [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/)
 
 ### Simple Storage Service (S3)
 
 ### Virtual Private Cloud (VPC)
+- Heart of networking at AWS
+- Enables launching of a complete virtual network and mimics a data center
+- Uses CIDR notation to describe a users network
+- Uses subnets to break up the network and allow users to have certain resources uses specific parts of the network
+- Uses private subnets to control resources within the network without internet access with the exception of a NAT gateway to connect to services outside of the VPC
+- Uses public subnets to control resources within the network along with the ability to initiate and receive connection from the internet through an internet gateway 
+- Network Access Control lists are used to control communication within the network at the subnet level
+- Security groups are used to control communication to the network at the virtual private cloud instance level
+- Route Tables define where subnet traffic can go based on an IP address
+
+SecurEd Use Cases:
+- Launch and manage EC2 instances within a network
+- Launch and manage ECS clusters within a network
+- Launch and manage elastic beanstalk instances within a network
+- Launch and manage elastic load balancer instances within a network
+- Allow lambda functions to use internal resources
 
 ### Route53
 
