@@ -122,7 +122,7 @@ Documentation:
 - Uses subnets to break up the network and allow users to have certain resources uses specific parts of the network
 - Uses private subnets to control resources within the network without internet access with the exception of a NAT gateway to connect to services outside of the VPC
 - Uses public subnets to control resources within the network along with the ability to initiate and receive connection from the internet through an internet gateway 
-- Network Access Control lists are used to control communication within the network at the subnet level
+- Network Access Control lists (ACLs) are used to control communication within the network at the subnet level
 - Security groups are used to control communication to the network at the virtual private cloud instance level
 - Route Tables define where subnet traffic can go based on an IP address
 
