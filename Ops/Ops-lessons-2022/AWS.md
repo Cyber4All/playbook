@@ -73,7 +73,7 @@ Documentation:
 ### EventBridge
 - Abstracted version of cloudwatch events
 - Allows users to create rules that initiate events that trigger a target it has set in that rule
-- Eventbus is a collection of rules tha triggers targets
+- Eventbus is a collection of rules that triggers targets
 - In eventbus an event has an rule and a target
   - Whenever the rule is matched, the target is initiated
 
