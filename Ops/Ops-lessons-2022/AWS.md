@@ -81,6 +81,7 @@ SecurEd Use Cases:
 
 - Scheduled Tasks in ECS Clusters are deployed on Fargate
 - Looking to run low-demand services on Fargate rather then EC2
+- scalable high-demand services
 
 Documentation:
 
