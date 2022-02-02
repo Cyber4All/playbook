@@ -81,7 +81,7 @@ SecurEd Use Cases:
 - Trigger all scheduled tasks in ECS
 - Trigger SNS and bundling service
 
-[AWS CloudTrail](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+[AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 
 ### CloudTrail
 - Tracks AWS API calls
