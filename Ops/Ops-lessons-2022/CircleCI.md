@@ -8,7 +8,7 @@
 
 ## CircleCI Console
 
-*Include Pricture*
+*Include Picture*
 
 ## CircleCI Concepts
 
