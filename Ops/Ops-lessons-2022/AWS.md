@@ -78,9 +78,74 @@ Each policy contains permissions that give or do not give access to certain serv
 
 ### Elastic Container Service (ECS)
 
+Allows the management of containers and applications to run on the cloud.
+
+ECS Resources:
+
+- Clusters
+  - Services - 24/7 running applications on EC2 or Fargate
+  - Tasks (running/stopped)
+  - ECS Instances - Compute power for the Cluster
+  - Scheduled tasks - Configured task-definitions that are targets of EventBridge rules
+- Task-definitions
+
+SecurEd Use Cases:
+
+- Version control our applications with task-definition families (us-east-1, N. Virginia)
+- Scheduled tasks with EventBridge can be found in clusters and run on Fargate
+- We have an EC2 instance for the Clark-Services cluster which provides compute power to the ECS services running behind a load-balancer
+
+Documentation:
+
+- [AWS ECS Documentation Home](https://docs.aws.amazon.com/ecs/?id=docs_gateway)
+- [AWS ECS Best Practices](https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/intro.html)
+- [AWS ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+
 ### Elastic Computer Cloud (EC2)
 
-### Fargate 
+Provides virtual compute power to run applications
+
+EC2 Resources:
+
+- Instances - configured VM that has network information associated with it
+- Images - amazon machine images (VMs)
+- Instance type - the size of compute power allotted to the instance
+
+SecurEd Use Cases:
+
+- ECS services are deployed using ECS Instance which is actually a t3.large EC2 instance
+- ElasticBeanstalk deploys applications on EC2
+- In the EC2 dashboard LoadBalancers and their target groups can be found which are used by ElasticBeanstalk and ECS services
+
+Documentation:
+
+- [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/?id=docs_gateway)
+- [AWS EC2 User Guide for Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+- [AWS EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Welcome.html)
+
+### Fargate
+
+Serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.
+
+[What is Serverless?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
+
+Difference between Fargate and EC2:
+
+- Serverless
+- Autoscales compute resources
+- No infrastructure management
+- Image -> Define Compute resources -> Run, Manage applications -> Pay
+
+SecurEd Use Cases:
+
+- Scheduled Tasks in ECS Clusters are deployed on Fargate
+- Looking to run low-demand services on Fargate rather then EC2
+- scalable high-demand services
+
+Documentation:
+
+- [ECS on AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html)
+- [User Guide for AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html)
 
 ### ElasticBeanstalk (EB)
 
