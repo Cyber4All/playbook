@@ -38,7 +38,7 @@ CircleCI allows for CI/CD. A repository is set up as a project and each project 
 
 ### Orbs
 
-Orbs are reusable snippers of code that help automate repeated processes, accelerate project setup, and make it easy to integrate with third-party tools such as Node, Docker, and AWS. 
+Orbs are reusable snippets of code that help automate repeated processes, accelerate project setup, and make it easy to integrate with third-party tools such as Node, Docker, and AWS. 
 
 To invoke an orb:
 
