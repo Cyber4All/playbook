@@ -56,7 +56,7 @@ To invoke an orb:
 
 In this case, ``` maven: circleci/maven@0.0.12 ```, maven can be thought as the object reference variable and is used in the workflow named ``` maven_test ``` 
 
-You can create your own orb and use them within your organization only or post it on the circleci orb registry
+You can create your own orb and use them within your organization only or post it on the circleci orb registry.
 
 SecurEd will be creating their own orb to make our config.yml shorters and abstract many jobs and commands to a single repository.
 
