@@ -18,6 +18,19 @@
 
 ### User Types
 
+There are different user types that exist in CircleCi, each have their own permissions within the organization:
+
+| User Type | Description | Example Permissions |
+| --- | --- | --- |
+| Organization Admin | The GitHub organization owner | Restricting contexts to a security group |
+| Project Admin | The user who adds a repository to CircleCI | - |
+| User | A user under an organization | Access executed pipelines and workflows |
+| CircleCI User | Anyone who can log into CircleCI | Change user settings |
+
+References:
+- [Project Administrator](https://circleci.com/docs/2.0/glossary/#project-administrator)
+- [User](https://circleci.com/docs/2.0/glossary/#user)
+
 ### Pipelines
 
 ## Config.yml
@@ -31,6 +44,13 @@
 ### Commands
 
 ### Executors
+
+An executor is an execution environment in CircleCI.  It defines the underlying technology or environment to run the job on.  For instance, using docker, machine (Linux VM), MacOS, or Windows to run commands.
+
+For SecurEd Inc., we primarily use the docker executors.  For older services (such as learning object service), we have built our own images for executors: [cyber4all/circleci-aws](https://hub.docker.com/r/cyber4all/circleci-aws).
+
+References:
+- [CircleCI Docs - Executor Intro](https://circleci.com/docs/2.0/executor-intro/)
 
 ### Jobs
 
