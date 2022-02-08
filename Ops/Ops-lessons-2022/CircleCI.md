@@ -6,6 +6,16 @@
 
 ## What is CircleCI?
 
+CI/CD stands for Continous Integration, Continuous Deployment
+
+Continuous integration is a practice that ecnourages developers to integrate their code into a main branch of a shared repository early and often. Instead of building out features in isolation and integrating them at the end of a development cycle, code is integrated with the shared repository by each developer multiple times throughout the day
+
+Continuous deployment is a software release process that uses automated testing to validate if changes to a codebase are correct and stable for immediate autonomous deployment to a production environment
+
+CircleCI allows for CI/CD. A repository is set up as a project and each project contain pipelines that execute tests to ensure that new changes that were just committed on a branch do not break the current branch. If tests fail, the developer is notified so that they may be able to look at the logs and make the necessary changes
+
+[About CircleCI](https://circleci.com/docs/2.0/about-circleci/)
+
 ## CircleCI Console
 
 *Include Picture*
@@ -41,6 +51,34 @@ References:
 
 ### Orbs
 
+Orbs are reusable snippets of code that help automate repeated processes, accelerate project setup, and make it easy to integrate with third-party tools such as Node, Docker, and AWS. 
+
+To invoke an orb:
+
+```yaml
+  version: 2.1
+
+  orb:
+    maven: circleci/maven@0.0.12
+  
+  workflows:
+    maven_test:
+      jobs:
+        - maven/test
+```
+
+In this case, ``` maven: circleci/maven@0.0.12 ```, maven can be thought as the object reference variable and is used in the workflow named ``` maven_test ``` 
+
+You can create your own orb and use them within your organization only or post it on the circleci orb registry.
+
+SecurEd will be creating their own orb to make our config.yml shorters and abstract many jobs and commands to a single repository.
+
+Resources:
+
+[Orb Documentation](https://circleci.com/docs/2.0/concepts/#orbs) <br>
+[Orb Introduction](https://circleci.com/docs/2.0/orb-intro/) <br>
+[Authoring Orbs](https://circleci.com/docs/2.0/orb-author-intro/)
+
 ### Commands
 
 ### Executors
@@ -55,6 +93,26 @@ References:
 ### Jobs
 
 ### Workflows
+
+Workflows define a list of jobs and their run order. It is possible to run jobs concurrently, sequentially, on a schedule, or with a manual gate using an approval job
+
+```yaml
+  ...
+  workflows:
+    build_and_test: # naming the workflow
+      jobs: # tasks that the workflow will execute
+        # Theses jobs would be created and defined somewhere else in the config.yml file
+        - build1 
+        - build2:
+          requires: # Build2 job does not start until build1 finishes
+            - build1
+        - build3:
+          requires: # Build3 job doesenot start until build1 finishes
+            - build1
+        # Build2 and build3 will run concurrently
+```
+
+[Workflows](https://circleci.com/docs/2.0/concepts/#workflows)
 
 ## Demo Example
 
