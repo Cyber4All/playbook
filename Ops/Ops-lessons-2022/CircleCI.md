@@ -42,12 +42,60 @@ References:
 - [User](https://circleci.com/docs/2.0/glossary/#user)
 
 ### Pipelines
+Pipelines are the highest-level unit of work that includes the entire `.circleci/config.yml` file. Pipelines have workflows which coordinate jobs and they have a fixed, linear lifecycle and are associated with a specific actor. There are multiple ways to trigger a pipeline including a push to a project, a scheduled task, or manually through the CircleCI app. 
 
 ## Config.yml
 
 ### YAML Syntax
+YAML is a human-friendly data serialization standard for all programming language. It is a strict superset of JSON, which means it can do everything that JSON can and more! 
 
-*Include Diagram*
+#### Basic Structure 
+A YAML file is just a hash map that consists of one or more key-value pairs that can be nested.
+```yaml
+  key: value
+  key: 
+    nested_key: "yeet a value in here"
+```
+
+##### Multi-line string
+```yaml
+  multi: >
+    I am on multiple
+    lines bruh
+```
+
+##### Sequences
+```yaml
+  star_wars:
+    - episode_4: "The real first episode"
+    - episode_5
+    - episode_6
+    - episode_1:
+        a_fake_first: true
+    - episode_2
+    - episode_3
+```
+##### Anchors and Aliases 
+To simplify a `config.yaml` anchors identified by the & character and aliases identified by the * can be used to identify values. 
+```yaml
+  character:
+    - &name Darth Vadar
+    - &age 63
+    - &hobbies Taking over the galaxy
+    - *name
+    - *age
+    - *hobbies
+``` 
+The output of this would be:
+```yaml
+  character:
+    - Darth Vadar
+    - 63
+    - Taking over the galaxy
+``` 
+
+##### Further Examples
+CircleCI[Configuring CircleCI](https://circleci.com/docs/2.0/configuration-reference/)
 
 ### Orbs
 
