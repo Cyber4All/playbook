@@ -47,7 +47,7 @@ Pipelines are the highest-level unit of work that includes the entire `.circleci
 ## Config.yml
 
 ### YAML Syntax
-YAML is a human-friendly data serialization standard for all programming language. It is a strict superset of JSON, which means it can do everything that JSON can and more! 
+YAML is a human-friendly data serialization standard for all programming languages. It is a strict superset of JSON, which means it can do everything that JSON can and more! 
 
 #### Basic Structure 
 A YAML file is just a hash map that consists of one or more key-value pairs that can be nested.
