@@ -18,13 +18,27 @@ CircleCI allows for CI/CD. A repository is set up as a project and each project 
 
 ## CircleCI Console
 
-*Include Picture*
+![CircleCi Console](./assets/circleCi/circleConsole.png)
+The CircleCi Console allows easy access to the projects you work on. The left navigation panel allows you to toggle between the different 
+organizations that you may have assocaited with your circle account. The dashboard displays all pipelines that you follow and allows you 
+to filter certain projects, pipelines, and even specific branches. The projects page allows you to control which software pipelines you
+want to follow. Here is were you will configure your projects repo with circle. 
 
+From the dashboard, you can view the pipelines integration and deploymnet by clicking on the status of the pipeline.
+
+![CircleCi Pipeline Status](./assets/circleCi/circlePipelineStatus.png)
+
+You can expand each job to see what is being executed as well as any errors that occured.
+
+![CircleCi Pipeline Job](./assets/circleCi/circleJob.png)
 ## CircleCI Concepts
 
 ### Projects
 
 ### Configuration
+CircleCI is rooted in the principle of 'configuration as code'. The CI/CD process is executed through a [config.yml](#configyml). The *config.yml* 
+file is located in a folder called *.circleci* at the root of our projects. The YAML syntax is what Circle uses for its configuration. 
+This YAML file is what defines each pipeline entirely with [commands](#commands), [jobs](#jobs), [executors](#executors), and [workflows](#workflows).
 
 ### User Types
 
@@ -139,7 +153,47 @@ References:
 - [CircleCI Docs - Executor Intro](https://circleci.com/docs/2.0/executor-intro/)
 
 ### Jobs
+Jobs are collections of steps. All of the steps in the job are executed in a single unit, either within a fresh container 
+or VM. Jobs can be run using *machine* or *docker* executors, which can compose Docker containers to run a job(s) and any service(s) they require
 
+The example below is what is actually being used by clark-client. We have a build job and a publish-image job.
+The build will build the angular application and persist the working directory to the workspace to be used.
+The publish image job will push the new docker image to dockerhub
+
+```yaml
+...
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.13.2
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Build Application
+          command: yarn ng build --configuration production --no-progress
+      - persist_to_workspace: 
+          root: dist
+          paths: 
+            - ./
+
+  publish-image:
+    docker:
+      - image: cimg/node:16.13.2
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 20.10.2
+      - run:
+          name: Login to docker
+          command: docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
+      - docker/build:
+          image: "cyber4all/clark-client"
+      - docker/push:
+          image: "cyber4all/clark-client"
+```
 ### Workflows
 
 Workflows define a list of jobs and their run order. It is possible to run jobs concurrently, sequentially, on a schedule, or with a manual gate using an approval job
