@@ -6,9 +6,9 @@
 
 ## What is CircleCI?
 
-CI/CD stands for Continous Integration, Continuous Deployment
+CI/CD stands for Continuous Integration, Continuous Deployment
 
-Continuous integration is a practice that ecnourages developers to integrate their code into a main branch of a shared repository early and often. Instead of building out features in isolation and integrating them at the end of a development cycle, code is integrated with the shared repository by each developer multiple times throughout the day
+Continuous integration is a practice that encourages developers to integrate their code into a main branch of a shared repository early and often. Instead of building out features in isolation and integrating them at the end of a development cycle, code is integrated with the shared repository by each developer multiple times throughout the day
 
 Continuous deployment is a software release process that uses automated testing to validate if changes to a codebase are correct and stable for immediate autonomous deployment to a production environment
 
@@ -23,6 +23,9 @@ CircleCI allows for CI/CD. A repository is set up as a project and each project 
 ## CircleCI Concepts
 
 ### Projects
+Shares the same name as the code repository it is configured to automate workflows, tests, and deployments for.
+
+Settings and configurations for CircleCI projects can be configured to use specific settings, contexts, and environment variables for the CI/CD pipeline it uses
 
 ### Configuration
 
@@ -119,7 +122,7 @@ In this case, ``` maven: circleci/maven@0.0.12 ```, maven can be thought as the 
 
 You can create your own orb and use them within your organization only or post it on the circleci orb registry.
 
-SecurEd will be creating their own orb to make our config.yml shorters and abstract many jobs and commands to a single repository.
+SecurEd will be creating their own orb to make our config.yml shorter and abstract many jobs and commands to a single repository.
 
 Resources:
 
@@ -128,6 +131,10 @@ Resources:
 [Authoring Orbs](https://circleci.com/docs/2.0/orb-author-intro/)
 
 ### Commands
+
+Used in tandem with Jobs and Steps to execute specific actions for a particular job or step
+
+Commands can be named so that they can be reused in the CircleCI config.yml
 
 ### Executors
 
